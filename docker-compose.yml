@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rahulgupta
+    ports:
+      - "3306:3306"
+
+  php-app:
+    image: php-app1
+    container_name: php-app-container
+    ports:
+      - "8090:80"
+    restart: always
